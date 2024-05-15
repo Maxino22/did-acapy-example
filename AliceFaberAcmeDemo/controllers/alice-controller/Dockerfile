@@ -2,6 +2,7 @@
 FROM node:16 as build
 WORKDIR /app
 COPY package*.json /app/
+RUN npm install -g npm@10.7.0
 RUN npm install
 COPY . .
 ARG RUNMODE
